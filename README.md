@@ -7,7 +7,7 @@
 DiveCore核心库之UI组件 - MoUI
 
 
-##### 使用
+##### 项目启动
 
 ````
 安装依赖 npm install
