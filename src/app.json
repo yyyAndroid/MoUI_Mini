@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/home/home"
+        // label
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTitleText": "DiveCore MoUI",
+        "navigationBarTextStyle": "white"
+    }
+}
