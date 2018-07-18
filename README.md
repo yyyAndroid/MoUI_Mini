@@ -3,8 +3,9 @@
      <img width="200" src="https://ojibl5jc1.qnssl.com/fucking_five.jpeg">
 </p>
 
-# MoUI_Mini
-DiveCore核心库之UI组件 - MoUI
+# DiveCore
+### MoUI_Mini
+DiveCore核心库之UI组件 - MoUI，高质量小程序UI组件。
 
 
 ##### 项目启动
