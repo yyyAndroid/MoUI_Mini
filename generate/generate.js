@@ -69,10 +69,10 @@ function writeContentTofile(file, template) {
         template,
         (error) => {
             if (error) {
-                console.log(error);
+                console.log(error)
                 process.exit()
             }
-            console.log(color.green(`${name} file create success !!!`));
+            console.log(color.green(`${name} file create success !!!`))
         }
     )
 }
@@ -85,7 +85,7 @@ function writePagePathToApp(fileName) {
     const results = `${temp[0].trim()},
         "pages/${fileName}/${fileName}"
         // label${temp[1]}`
-    fs.writeFileSync(app, results);
+    fs.writeFileSync(app, results)
 }
 
 /** 对外暴露接口 **/

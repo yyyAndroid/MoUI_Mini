@@ -47,10 +47,23 @@ gulp.task('compile-jade', () => {
         .pipe(gulp.dest('../app/'))
 })
 
+// 编译json
+gulp.task('compile-json', () => {
+    return gulp.src(['../src/**/*.json'])
+        .pipe(plManager.plumber())
+        .pipe(plManager.sourcemaps.init())
+        .pipe(plManager.cached('compile-json'))
+        .pipe(plManager.jsonminify())
+        .pipe(reload({
+            stream: true
+        }))
+        .pipe(gulp.dest('../app/'))
+
+})
+
 // 拷贝文件
 gulp.task('copy-file', () => {
     return gulp.src([
-            '../src/**/*.json',
             '../src/**/*.js',
             '../src/**/*.wxss',
             '../src/**/*.wxml',
@@ -71,7 +84,7 @@ gulp.task('copy-file', () => {
 gulp.task('watch', () => {
     gulp.watch('../src/**/*.less', ['compile-less'])
     gulp.watch('../src/**/*.jade', ['compile-jade'])
-    gulp.watch('../src/**/*.json', ['copy-file'])
+    gulp.watch('../src/**/*.json', ['compile-json'])
     gulp.watch('../src/**/*.js', ['copy-file'])
     gulp.watch('../src/**/*.wxss', ['copy-file'])
     gulp.watch('../src/**/*.wxml', ['copy-file'])
@@ -83,6 +96,7 @@ gulp.task('watch', () => {
 gulp.task('default', [
     'compile-less',
     'compile-jade',
+    'compile-json',
     'copy-file',
     'watch'
 ])
