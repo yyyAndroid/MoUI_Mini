@@ -1,3 +1,6 @@
 {
-    "title": ""
+    "navigationBarTitleText": "MoUI",
+    "usingComponents": {
+        "mo-panel": "../../component/panel/panel"
+    }
 }

@@ -7,6 +7,11 @@ Component({
     behaviors: [],
 
     /**
+     * 组件接受的外部样式
+     **/
+    externalClasses: ['mo-class'],
+
+    /**
      * 组件的对外属性
      **/
     properties: {
