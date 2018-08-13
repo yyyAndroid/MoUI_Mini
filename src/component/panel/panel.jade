@@ -1,0 +1,10 @@
+view.mo-panel
+    view.mo-panel-title(
+        class="mo-panel-title {{isTop ? 'mo-panel-without-title' : ''}}"
+        wx:if="{{title}}"
+    ) {{title}}
+    view(
+        class="mo-panel-content {{isBorder ? '' : 'mo-panel-without-border'}}"
+    )
+        slot
+    
