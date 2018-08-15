@@ -1,4 +1,5 @@
 import DiveI18n from './DiveI18n'
+
 import cn from './lang/cn/index'
 import en from './lang/en/index'
 
