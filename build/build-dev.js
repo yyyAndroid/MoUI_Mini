@@ -67,6 +67,8 @@ gulp.task('copy-file', () => {
             '../src/**/*.js',
             '../src/**/*.wxss',
             '../src/**/*.wxml',
+            '../src/**/*.ttf',
+            '../src/**/*.eot',
             '../src/**/*.{jpg, jpeg, png, gif}'
         ])
         .pipe(plManager.plumber())

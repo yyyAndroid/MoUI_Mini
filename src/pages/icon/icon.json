@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "icon",
+    "usingComponents": {
+        "mo-icon": "../../component/icon/icon"
+    }
+}
