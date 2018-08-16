@@ -11,9 +11,7 @@ class DiveI18n {
     // 构造方法
     constructor(objc = {}) {
         changeLocale = objc.locale
-        this.locale = objc.locale
-        this.messages = objc.messages
-        _mountPage(this.locale, this.messages)
+        _mountPage(objc.locale, objc.messages)
     }
 
     // 切换语言
@@ -34,7 +32,7 @@ function _getCurrentPage() {
     return curPage
 }
 
-//- 扩展页面
+//- 将语言库扩展到页面
 function _mountPage(locale, messages) {
 
     if (!messages && !locale)
@@ -59,7 +57,7 @@ function _mountPage(locale, messages) {
             }
         }
 
-        // mixins 判断语言切换
+        // mixins判断语言切换
         let onShow = opt.onShow
         opt.onShow = (options) => {
             let curPage = _getCurrentPage()
