@@ -1,0 +1,54 @@
+view.container
+  z-indexer(
+    color="rgb(33, 191, 171)"
+  )
+    z-indexer-item(
+      wx:for="{{cities}}"
+      wx:key="{{index}}"
+      name="{{item.name}}"
+      key="{{item.key}}"
+      color="#999999"
+    )
+      view.special-content(
+        class="row wrap"
+        wx:if="{{item.key === '当前'}}"
+      )
+        view.indexer-special-item(
+          wx:for="{{item.list}}"
+          wx:for-item="subItem"
+          wx:for-index="subIndex"
+          wx:key="{{index}}"
+          hover-class="hover-click"
+          data-item="{{subItem}}"
+          bindtap="cityClick"
+        ) {{subItem.name}}
+      view.special-content(
+        class="row wrap"
+        wx:elif="{{item.key === '热门'}}"
+      )
+        view.indexer-special-item(
+          wx:for="{{item.list}}"
+          wx:for-item="subItem"
+          wx:for-index="subIndex"
+          wx:key="{{index}}"
+          hover-class="hover-click"
+          data-item="{{subItem}}"
+          bindtap="cityClick"
+        ) {{subItem.name}}
+      view(
+        wx:else
+      ) 
+        view.indexer-item(
+          wx:for="{{item.list}}"
+          wx:for-item="subItem"
+          wx:for-index="subIndex"
+          wx:key="{{index}}"
+          hover-class="hover-click"
+          data-item="{{subItem}}"
+          bindtap="cityClick"
+        ) {{subItem.name}}
+
+
+
+
+    

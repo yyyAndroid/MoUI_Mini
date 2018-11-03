@@ -1,0 +1,24 @@
+view.container
+  scroll-view.scroll(
+    scroll-y
+    scroll-top="{{scrollTop}}"
+  )
+    slot
+  view.indexer-fixed(
+    catchtouchstart="touchMove" 
+    catchtouchmove="touchMove" 
+    catchtouchend="touchEnd"
+  )
+    view(
+      style="height: {{indexHeight + 'px'}}"
+      wx:for="{{fixedData}}"
+      wx:key="{{index}}"
+      data-index="{{index}}"
+      catchtap="fixedClick"
+    ) 
+      text.fixed-text(
+        style="color: {{color}}"
+      ) {{item}}
+  view.tooltip(
+    style="{{ isTouches ? 'display:block' : 'display:none' }}"
+  ) {{currentName}}
