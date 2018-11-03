@@ -1,0 +1,31 @@
+.container {
+  .scroll {
+    height: 100vh;
+  }
+  .indexer-fixed {
+    position: fixed;
+    padding: 0 15rpx;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .fixed-text {
+      font-weight: 500;
+      font-size: 24rpx;
+    }
+  }
+  .tooltip {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(0,0,0,.7);
+  }
+}

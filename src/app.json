@@ -2,7 +2,8 @@
     "pages": [
         "pages/home/home",
         "pages/log/log",
-        "pages/icon/icon"
+        "pages/icon/icon",
+        "pages/indexer/indexer"
         // label
     ],
     "window": {

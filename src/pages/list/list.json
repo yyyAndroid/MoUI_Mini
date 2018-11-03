@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "list",
+    "usingComponents": {
+        "mo-list": "../../component/list/list"
+    }
+}
